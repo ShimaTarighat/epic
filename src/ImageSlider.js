@@ -14,8 +14,8 @@ const Slide = ({ image }) => {
 
 const ImageSlider = () => {
   const settings = {
-    dots: false,
-    arrows: true,
+    dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -34,37 +34,6 @@ const ImageSlider = () => {
         },
       },
     ],
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    cssEase: "linear",
-    centerMode: true,
-    variableWidth: true,
-  };
-
-  const CustomPrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
-        {"<"}
-      </div>
-    );
-  };
-
-  const CustomNextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block" }}
-        onClick={onClick}
-      >
-        {">"}
-      </div>
-    );
   };
 
   return (
@@ -75,11 +44,6 @@ const ImageSlider = () => {
         <Slide image={require("./image3.jpg")} />
         <Slide image={require("./image4.jpg")} />
         <Slide image={require("./image5.jpg")} />
-        <Slide image={require("./image6.jpg")} />
-        <Slide image={require("./image7.jpg")} />
-        <Slide image={require("./image8.jpg")} />
-        <Slide image={require("./image9.jpg")} />
-        <Slide image={require("./image10.jpg")} />
       </Slider>
     </div>
   );
